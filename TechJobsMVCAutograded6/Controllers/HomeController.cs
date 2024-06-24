@@ -4,6 +4,7 @@ using TechJobsMVCAutograded6.Models;
 
 namespace TechJobsMVCAutograded6.Controllers;
 
+// displays the homepage (index page) for the app
 public class HomeController : Controller
 {
     public IActionResult Index()
@@ -16,4 +17,3 @@ public class HomeController : Controller
         return View();
     }
 }
-

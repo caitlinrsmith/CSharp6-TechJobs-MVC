@@ -13,6 +13,7 @@ public class SearchController : Controller
     // GET: /<controller>/
     public IActionResult Index()
     {
+        // renders the form defined in the Index.cshtml template
         ViewBag.columns = ListController.ColumnChoices;
         return View();
     }

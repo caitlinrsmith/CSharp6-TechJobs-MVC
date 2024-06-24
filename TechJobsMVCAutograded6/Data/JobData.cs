@@ -4,6 +4,10 @@ using TechJobsMVCAutograded6.Models;
 
 namespace TechJobsMVCAutograded6.Data;
 
+// the "model" for the MVC is here, but not in the typical MVC/object-oriented sense
+
+// The JobData class serves the same purpose as before—it reads data from the job_data.csv file and stores it in a format we can use. In this case, that format is a List of Job objects, which is stored in the Models folder.
+
 public class JobData
 {
     static private string DATA_FILE = "Data/job_data.csv";
@@ -16,6 +20,7 @@ public class JobData
     static private List<JobField> AllPositionTypes = new List<JobField>();
     static private List<JobField> AllCoreCompetencies = new List<JobField>();
 
+// static methods I worked on before provided here
     static public List<Job> FindAll()
     {
         LoadData();
