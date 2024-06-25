@@ -56,7 +56,21 @@ public class ListController : Controller
         // can obtain data by implementing the JobData class methods
         // we are “searching” for a particular value within a particular field and then displaying jobs that match.
         //  user will arrive at this handler method as a result of clicking on a link within the Index.cshtml view
-        
+
+        List<Job> jobs = new();
+
+        if (value == "View All")
+        {
+            jobs = JobData.FindAll();
+        }
+        else
+        {
+            jobs = JobData.FindByColumnAndValue(column, value);
+            
+        }
+        ViewBag.title = value;
+        ViewBag.jobs = jobs;
+
         return View();
     }
 }

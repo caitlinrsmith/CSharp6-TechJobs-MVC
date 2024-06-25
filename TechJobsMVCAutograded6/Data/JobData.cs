@@ -147,6 +147,7 @@ public class JobData
 
         if (IsDataLoaded)
         {
+            //returns early if the data was already loaded previously
             return;
         }
 
