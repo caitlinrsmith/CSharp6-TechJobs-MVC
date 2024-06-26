@@ -24,7 +24,7 @@ public class SearchController : Controller
     {
         List<Job> jobs = new();
 
-        if (searchTerm == "all" || searchTerm == "")
+        if ((searchType == "all" && searchTerm == null) || searchTerm == null)
         {
             jobs = JobData.FindAll();
         }
